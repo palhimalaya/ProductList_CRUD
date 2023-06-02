@@ -74,7 +74,7 @@ const ProductList = () => {
                       className="delete-button"
                       onClick={() => {
                         const response = confirm(
-                          "Are you sure you want to do that?"
+                          "Are you sure you want to delete the product?"
                         );
                         if (response) {
                           handleDelete(product.id);
