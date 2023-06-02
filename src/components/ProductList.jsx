@@ -73,7 +73,12 @@ const ProductList = () => {
                     <button
                       className="delete-button"
                       onClick={() => {
-                        handleDelete(product.id);
+                        const response = confirm(
+                          "Are you sure you want to do that?"
+                        );
+                        if (response) {
+                          handleDelete(product.id);
+                        }
                       }}
                     >
                       Delete
