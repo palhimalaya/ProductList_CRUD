@@ -29,14 +29,12 @@ const Modal = ({
     setDescription("");
     setStatus("");
     setCreatedBy("");
-    id(0);
   };
 
   const AddProduct = async (e) => {
     e.preventDefault();
 
     const product = {
-      id: id,
       product_name: name,
       category_name: category,
       description,

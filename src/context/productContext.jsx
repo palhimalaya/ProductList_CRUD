@@ -13,7 +13,6 @@ const ProductContextProvider = ({ children }) => {
     try {
       const responseData = await getProducts();
       setProducts(responseData);
-
       setFilteredData(responseData.products.reverse());
       setIsLoading(false);
     } catch (error) {
