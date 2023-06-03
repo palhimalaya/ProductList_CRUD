@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   return (
-    <main>
+    <main className="main-container">
       {isLoading ? (
         <div className="loading">
           <ClimbingBoxLoader color="#d67036" />

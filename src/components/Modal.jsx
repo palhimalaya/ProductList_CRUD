@@ -1,4 +1,5 @@
 import { useProductContext } from "../context/productContext";
+import getStatus from "../lib/getStatus";
 import { addProducts } from "../lib/productsApi";
 import { editProduct } from "../lib/productsApi";
 import { ToastContainer, toast } from "react-toastify";
@@ -152,9 +153,9 @@ const Modal = ({
               <option value="" disabled>
                 Select a status
               </option>
-              {products.product_status.map((status, index) => (
-                <option key={index} value={status}>
-                  {status}
+              {products.product_status.map((productStatus, index) => (
+                <option key={index} value={productStatus}>
+                  {productStatus}
                 </option>
               ))}
             </select>

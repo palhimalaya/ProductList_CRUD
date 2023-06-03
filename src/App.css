@@ -5,6 +5,11 @@
   font-size: 18px;
 }
 
+.main-container {
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
 /* table */
 .table {
   width: 100%;
@@ -121,9 +126,9 @@
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 20px;
-  border-radius: 4px;
+  border-radius: 10px;
   max-width: 500px;
   width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -157,11 +162,12 @@
 .add-product-form input,
 .add-product-form select,
 .add-product-form textarea {
-  width: 95%;
   padding: 0.5rem;
-
+  width: 100%;
+  box-sizing: border-box;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 .add-product-form button {
@@ -208,5 +214,10 @@
 
   .edit-button {
     height: 41px;
+  }
+
+  .main-container {
+    margin-right: 0px;
+    margin-left: 0px;
   }
 }

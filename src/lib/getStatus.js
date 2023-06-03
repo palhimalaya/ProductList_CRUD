@@ -4,7 +4,7 @@ const getStatus = (statusData) => {
       return "In Stock";
 
     case "out_off_stock":
-      return "Out Off Stock";
+      return "Out off stock";
 
     case "limited_available":
       return "Limited Available";
