@@ -4,6 +4,7 @@ import { deleteProduct } from "../lib/productsApi";
 import Modal from "./Modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import getStatus from "../lib/getStatus";
 
 const ProductList = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,11 +17,11 @@ const ProductList = () => {
 
   const { filteredData, setIsEdit, getProductsFromApi } = useProductContext();
 
-  const openModal = (product) => {
+  const openModal = async (product) => {
     setName(product.product_name);
     setCategory(product.category_name);
     setDescription(product.description);
-    setStatus(product.status);
+    setStatus(getStatus(product.status));
     setCreatedBy(product.created_by);
     setId(product.id);
     setIsOpen(true);
@@ -58,7 +59,7 @@ const ProductList = () => {
               <td>{product.category_name}</td>
               <td>{product.description}</td>
               <td>{product.created_at.substring(0, 10)}</td>
-              <td>{product.status}</td>
+              <td>{getStatus(product.status)}</td>
               <td>
                 <div className="table-button">
                   <div>
