@@ -31,7 +31,7 @@ const addProducts = async (product) => {
 
 const editProduct = async (product) => {
   try {
-    const response = await axios.put(`${baseURL}/${product.id}`, product);
+    const response = await axios.patch(`${baseURL}/${product.id}`, product);
     return response.data;
   } catch (error) {
     throw new Error(error);
